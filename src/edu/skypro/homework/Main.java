@@ -9,18 +9,10 @@ public class Main {
         Truck truck1 = new Truck("truck1", 6);
         Truck truck2 = new Truck("truck2", 8);
 
-        ServiceStation serviceStation = new ServiceStation();
+        ServiceFunctions serviceStation = new ServiceStation();
 
         serviceStation.check(bicycle1);
-        printSeparator();
         serviceStation.check(car1);
-        printSeparator();
         serviceStation.check(truck1);
-        printSeparator();
-        serviceStation.checkEngine();
-    }
-
-    private static void printSeparator() {
-        System.out.println("-------------------------");
     }
 }

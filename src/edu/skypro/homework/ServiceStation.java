@@ -5,32 +5,41 @@ public class ServiceStation implements ServiceFunctions {
     public void check(Bicycle bicycle) {
         printCheckTransport(bicycle);
         updateTyres(bicycle);
+        printSeparator();
     }
 
     public void check(Car car) {
         printCheckTransport(car);
         updateTyres(car);
         checkEngine();
+        printSeparator();
     }
+
     public void check(Truck truck) {
         printCheckTransport(truck);
         updateTyres(truck);
         checkEngine();
         checkTrailer();
+        printSeparator();
     }
 
-    public void printCheckTransport(Transport transport) {
+    private void printCheckTransport(Transport transport) {
         System.out.println("Обслуживаем " + transport.getModelName());
     }
 
-    public void updateTyres(Transport transport) {
+    private void updateTyres(Transport transport) {
         for (int i = 0; i < transport.getWheelsCount(); i++) {
             updateTyre();
         }
     }
+
+    private static void printSeparator() {
+        System.out.println("-------------------------");
+    }
+
     @Override
     public void updateTyre() {
-            System.out.println("Меняем покрышку");
+        System.out.println("Меняем покрышку");
     }
 
     @Override

@@ -1,6 +1,6 @@
 package edu.skypro.homework;
 
-public abstract class Transport{
+public abstract class Transport {
     private String modelName;
     private int wheelsCount;
 
